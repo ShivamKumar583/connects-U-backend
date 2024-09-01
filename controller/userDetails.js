@@ -4,7 +4,8 @@ const getUserDetailsFromToken = require('../helper/getUserDetailsFromToken');
 
 async function userDetails(req,res) {
     try{
-        const token = req.cookies.token || req.body.token || "" ;
+        // const token = req.cookies.token || "" ;
+        const {token} = req.body.token || "";
 
         console.log("token" , token)
 
