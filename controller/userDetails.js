@@ -6,6 +6,8 @@ async function userDetails(req,res) {
     try{
         const token = req.cookies.token || req.body.token || "" ;
 
+        console.log("token" , token)
+
         const user = await getUserDetailsFromToken(token) 
 
         
